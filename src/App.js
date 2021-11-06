@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from './Components/Button'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <section>
+        <nav>
+          Let's get dad joke
+        </nav>
+      </section>
+      <section>
+        <Button message='Gimme the random one!' />
+        <Button message='Let me see what I can find!' />
+      </section>
+    </main>
   );
 }
 
 export default App;
+
+//https://icanhazdadjoke.com/api
