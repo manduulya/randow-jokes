@@ -7,6 +7,7 @@
     margin: 1rem;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 600;
 }
 #button:hover {
     background-color: #fcc597;
