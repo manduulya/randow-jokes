@@ -1,0 +1,10 @@
+#random-joke {
+    font-size: 1.5rem;
+    color: #000;
+    background-color: rgba(255, 246, 255, .9);
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-top: 5rem;
+    font-style: italic;
+    font-weight: 500;
+}

@@ -1,6 +1,84 @@
 * {
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: rgb(16, 9, 38);
+    color: rgba(255,255,255,.85);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.logo {
+    width: 8rem;
+    padding: .5rem;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.34);
+    border-radius: 1rem;
+}
+.nav-header {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+.nav-header::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 1.5rem;
+    border-radius: .2rem;
+    -webkit-animation-name: color-transition;
+	animation-name: color-transition;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	/*default value for timing-function is ease, we'll specify linear to keep the same timing through out*/
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes color-transition {
+	0% {
+		background-color: #4C6085;
+		border-color: #4C6085;
+	}
+	33% {
+		background-color: #80D39B;
+		border-color: #80D39B;
+	}
+	66% {
+		background-color: #BE3E82;
+		border-color: #BE3E82;
+	}
+	100% {
+		background-color: #4C6085;
+		border-color: #4C6085;
+	}
+}
+
+@keyframes color-transition {
+	0% {
+		background-color: #4C6085;
+		border-color: #4C6085;
+	}
+	33% {
+		background-color: #80D39B;
+		border-color: #80D39B;
+	}
+	66% {
+		background-color: #BE3E82;
+		border-color: #BE3E82;
+	}
+	100% {
+		background-color: #4C6085;
+		border-color: #4C6085;
+	}
 }
