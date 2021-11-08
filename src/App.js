@@ -15,9 +15,8 @@ function App() {
         </nav>
       </section>
       <section>
-        <Button message='Gimme the random one!' />
-        <Button message='Let me see what I can find!' />
         <GenerateJokes />
+        <Button message='Let me see what I can find!' />
       </section>
     </main>
   );
