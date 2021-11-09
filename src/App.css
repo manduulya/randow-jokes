@@ -22,7 +22,7 @@ body {
 }
 .nav-header {
     font-size: 1.75rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
 .nav-header::after {
     content: '';

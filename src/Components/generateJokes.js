@@ -1,6 +1,5 @@
 import React from 'react';
 import './GenerateJokes.css'
-import Button from './Button'
 
 class GenerateJokes extends React.Component {
     constructor(props) {
@@ -29,8 +28,8 @@ class GenerateJokes extends React.Component {
 
         return (
             <section>
-                <Button type='button' message='Gimme random one!' generateOne={this.handleGenerate} />
-                <div id='random-joke'>{this.state.joke}</div>
+                <button type='button' id='button' onClick={this.handleGenerate}>Gimme random one!</button>
+                {this.state.joke && <div id='random-joke'>{this.state.joke}</div>}
             </section>
         )
     }
