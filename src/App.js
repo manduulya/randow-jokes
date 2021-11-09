@@ -2,6 +2,7 @@ import './App.css';
 import GenerateJokes from './Components/generateJokes';
 import './Components/Button.css'
 import logo from './assets/emoji.png'
+import SearchJokes from './Components/SearchJokes';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       </section>
       <section>
         <GenerateJokes />
+        <SearchJokes />
       </section>
     </main>
   );
