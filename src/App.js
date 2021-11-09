@@ -1,5 +1,4 @@
 import './App.css';
-import Button from './Components/Button'
 import GenerateJokes from './Components/generateJokes';
 import './Components/Button.css'
 import logo from './assets/emoji.png'
@@ -11,12 +10,11 @@ function App() {
       <section>
         <img src={logo} alt='dad joke logo' className='logo' />
         <nav className='nav-header'>
-          "Let's get dad joke!"
+          "Let's get some dad joke!"
         </nav>
       </section>
       <section>
         <GenerateJokes />
-        <Button message='Let me see what I can find!' />
       </section>
     </main>
   );
