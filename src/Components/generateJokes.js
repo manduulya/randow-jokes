@@ -11,7 +11,6 @@ class GenerateJokes extends React.Component {
     }
 
     handleGenerate = () => {
-        console.log('clicked')
         const URL = 'https://icanhazdadjoke.com/';
         const options = {
             method: 'GET',
