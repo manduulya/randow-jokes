@@ -14,7 +14,7 @@ function App() {
           "Let's get some dad joke!"
         </nav>
       </section>
-      <section>
+      <section className='main-section'>
         <GenerateJokes />
         <SearchJokes />
       </section>
