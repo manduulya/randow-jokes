@@ -82,3 +82,17 @@ body {
 		border-color: #4C6085;
 	}
 }
+.nav-button {
+	font-size: 1.25rem;
+	padding: 1rem 2rem;
+	border-radius: 0.25rem;
+	border: none;
+	margin: 0.25rem 0.5rem;
+	cursor: pointer;
+	background-color: #ffb5ab;
+	color:#610c00;
+	transition: 250ms ease-in-out;
+}
+.nav-button:hover {
+	background-color: #c97d73;
+}
