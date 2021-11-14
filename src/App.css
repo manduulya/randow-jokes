@@ -7,7 +7,7 @@ body {
     background-color: rgb(16, 9, 38);
     color: rgba(255,255,255,.85);
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,4 +95,24 @@ body {
 }
 .nav-button:hover {
 	background-color: #c97d73;
+}
+
+.X-button{
+	color: #fff;
+	text-decoration: none;
+	font-size: 2rem;
+	font-stretch: ultra-expanded;
+	transition: transform .7s ease-in-out;
+}
+.X-button:hover{
+	transform: rotate(360deg);
+}
+.hidden {
+	display: none;
+}
+
+@media only screen and  (min-width: 1023px) {
+	body {
+		max-width: 50%;
+	}
 }
