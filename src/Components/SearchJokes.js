@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.css'
+import './SearchJokes.css'
 
 
 export default class SearchJokes extends React.Component {
@@ -36,12 +37,12 @@ export default class SearchJokes extends React.Component {
         const { jokes } = this.state;
         return (
             <section>
-                <input type='text' placeholder='Enter your term' id='search-input' onChange={this.handleChange} required />
+                <input type='text' placeholder='Enter your term' id='search-input' className='search-input' onChange={this.handleChange} required />
                 <br />
                 <button type='submit' id='button' onClick={this.handleSearch}>Let me find some!</button>
-                <ul>
+                <ul className='result-ul'>
                     {jokes.map((joke) => (
-                        <li key={joke.id}>{joke.joke}</li>
+                        <li className='li-box' key={joke.id}>{joke.joke}</li>
                     ))}
                 </ul>
             </section>

@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import GenerateJokes from './Components/generateJokes';
 import './Components/Button.css'
@@ -7,7 +8,13 @@ import SearchJokes from './Components/SearchJokes';
 
 
 function App() {
-
+  const [isButtonsActive, setIsButtonActive] = React.useState(false);
+  const hideButtons = () => {
+    setIsButtonActive(true)
+  }
+  const showButtons = () => {
+    setIsButtonActive(false)
+  }
   return (
     <main className="App">
       <section>
@@ -17,13 +24,13 @@ function App() {
         </nav>
       </section>
       <Link to='/random'>
-        <button className='nav-button'>Random</button>
+        <button className={`nav-button ${isButtonsActive ? "hidden" : ""}`} onClick={hideButtons}>Random</button>
       </Link>
       <Link to='/search'>
-        <button className='nav-button'>Search</button>
+        <button className={`nav-button ${isButtonsActive ? "hidden" : ""}`} onClick={hideButtons} >Search</button>
       </Link>
       <Link to='..'>
-        <span>X</span>
+        <span className='X-button' onClick={showButtons}>X</span>
       </Link>
       <section className='main-section'>
         <Routes>
