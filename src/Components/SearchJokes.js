@@ -15,9 +15,9 @@ export default class SearchJokes extends React.Component {
         let userValue = e.currentTarget.value;
         this.setState({ userInput: userValue })
     }
-    handleSearch = () => {
+    handleSearch = (e) => {
+        e.preventDefault();
         const { userInput } = this.state;
-        console.log(userInput)
         const searchURL = (`https://icanhazdadjoke.com/search?term=${userInput}`);
         const options = {
             method: 'GET',
@@ -29,23 +29,22 @@ export default class SearchJokes extends React.Component {
             .then(res => res.json())
             .then(data => {
                 this.setState({ jokes: data.results })
-                console.log(this.state.jokes);
             })
     }
 
     render() {
-        const { jokes } = this.state;
+        const { jokes, userInput } = this.state;
         return (
-            <section>
+            <form>
                 <input type='text' placeholder='Enter your term' id='search-input' className='search-input' onChange={this.handleChange} required />
                 <br />
-                <button type='submit' id='button' onClick={this.handleSearch}>Let me find some!</button>
+                <button type='submit' id='button' disabled={!userInput} onClick={this.handleSearch}>Let me find some!</button>
                 <ul className='result-ul'>
                     {jokes.map((joke) => (
                         <li className='li-box' key={joke.id}>{joke.joke}</li>
                     ))}
                 </ul>
-            </section>
+            </form>
         )
     }
 }
