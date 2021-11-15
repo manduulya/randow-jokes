@@ -36,7 +36,7 @@ export default class SearchJokes extends React.Component {
     render() {
         const { jokes } = this.state;
         return (
-            <section>
+            <form>
                 <input type='text' placeholder='Enter your term' id='search-input' className='search-input' onChange={this.handleChange} required />
                 <br />
                 <button type='submit' id='button' onClick={this.handleSearch}>Let me find some!</button>
@@ -45,7 +45,7 @@ export default class SearchJokes extends React.Component {
                         <li className='li-box' key={joke.id}>{joke.joke}</li>
                     ))}
                 </ul>
-            </section>
+            </form>
         )
     }
 }

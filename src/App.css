@@ -91,24 +91,37 @@ body {
 	cursor: pointer;
 	background-color: #ffb5ab;
 	color:#610c00;
-	transition: 250ms ease-in-out;
+	transition: 200ms ease-in-out;
 }
 .nav-button:hover {
 	background-color: #c97d73;
 }
 
 .X-button{
-	color: #fff;
+	margin: 0 auto;
+	background-color: #ff5454;
+	padding: 1rem 3rem ;
+	border: none;
+	border-radius: .5rem;
+	display: none;
+	color: rgba(255,255,255,.9);
+	font-weight: 600;
+	cursor: pointer;
+	transition: .20s ease-in-out;
+}
+.X-button:hover {
+	color: #5c0000;
+	background-color: #ff8787;
+}
+.underline-delete {
 	text-decoration: none;
-	font-size: 2rem;
-	font-stretch: ultra-expanded;
-	transition: transform .7s ease-in-out;
 }
-.X-button:hover{
-	transform: rotate(360deg);
-}
+
 .hidden {
 	display: none;
+}
+.shown {
+	display: block;
 }
 
 @media only screen and  (min-width: 1023px) {
