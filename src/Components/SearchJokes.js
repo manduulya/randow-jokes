@@ -30,13 +30,14 @@ export default class SearchJokes extends React.Component {
             .then(data => {
                 this.setState({ jokes: data.results })
             })
+        this.setState({ userInput: '' })
     }
 
     render() {
         const { jokes, userInput } = this.state;
         return (
             <form>
-                <input type='text' placeholder='Enter your term' id='search-input' className='search-input' onChange={this.handleChange} required />
+                <input type='text' value={this.state.userInput} placeholder='Enter your term' id='search-input' className='search-input' onChange={this.handleChange} required />
                 <br />
                 <button type='submit' id='button' disabled={!userInput} onClick={this.handleSearch}>Let me find some!</button>
                 <ul className='result-ul'>
